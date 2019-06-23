@@ -1,0 +1,15 @@
+[core]
+	autocrlf = input
+[alias]
+	plog = log --pretty=oneline --abbrev-commit --graph --decorate --all
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+    ignored = ls-files --other --ignored --exclude-standard
+[user]
+    name = Alessandro Cunsolo
+    email = alessandro.cunsolo@gmail.com
+[include]
+    path = ~/.gitconfig.local

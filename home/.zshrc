@@ -71,8 +71,17 @@ ZSH_THEME="agnoster"
 plugins=(
     history
     git
+    git-flow
+    golang
     systemd
     archlinux
+    kate
+    man
+    mvn
+    sudo
+    tmux
+    vscode
+    zsh_reload
 )
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
@@ -81,7 +90,7 @@ fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+export EDITOR=vim
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

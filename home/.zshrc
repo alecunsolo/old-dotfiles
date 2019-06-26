@@ -88,10 +88,8 @@ plugins=(
     sbt
     zsh_reload
     themes
+    homeshick
 )
-
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 

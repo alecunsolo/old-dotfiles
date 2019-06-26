@@ -75,13 +75,19 @@ plugins=(
     golang
     systemd
     archlinux
+    copydir
+    copyfile
     kate
     man
     mvn
     sudo
     tmux
     vscode
+    rsync
+    scala
+    sbt
     zsh_reload
+    themes
 )
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"

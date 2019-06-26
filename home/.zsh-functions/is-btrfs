@@ -1,0 +1,5 @@
+emulate -L zsh
+unsetopt nomatch
+[[ -d $1 ]] || return 1
+[[ $(stat -f --format %T $1) == "btrfs" ]] || return 1
+ 

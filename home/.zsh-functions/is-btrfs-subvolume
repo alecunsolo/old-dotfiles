@@ -1,0 +1,16 @@
+emulate -L zsh
+autoload -U is-btrfs
+
+local dir=$1
+typeset -i inode result
+#Se il filesystem non è btrfs ritorna null
+is-btrfs ${dir}
+(( $? == 0 )) || return 1
+#I subvolume hanno inode 256 oppure 2
+inode="$(stat --format="%i" "$dir")"
+case $inode in
+  (2|256)
+    return 0;;
+  (*)
+    return 1;;
+esac

@@ -1,0 +1,2 @@
+killall plasmashell & 
+kstart5 plasmashell > /dev/null

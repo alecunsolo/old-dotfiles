@@ -1,0 +1,2 @@
+unfunction $1 || print "Funzione non caricata"
+autoload -Uz $1

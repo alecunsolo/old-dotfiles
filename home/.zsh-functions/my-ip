@@ -1,0 +1,5 @@
+emulate -L zsh
+
+local iface=${1:-enp2s0}
+
+ip addr show dev ${iface} | grep "inet " | awk '{print $2}' | sed -e 's:/.*::'

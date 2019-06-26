@@ -1,0 +1,5 @@
+typeset -xg http_proxy=http://localhost:3128
+typeset -xg https_proxy=$http_proxy
+typeset -xg ftp_proxy=$http_proxy
+typeset -xg no_proxy=*.global,*.local,10.*,localhost,127.0.0.1,192.168*,*.bancaimi.com
+

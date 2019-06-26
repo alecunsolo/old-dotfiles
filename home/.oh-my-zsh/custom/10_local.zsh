@@ -55,6 +55,8 @@ if [[ -d /usr/local/go ]]; then
     path=(/usr/local/go/bin $GOPATH/bin $path)
 fi
 
+#VS Code
+path=(~/opt/VSCode/latest/bin/ $path)
 repos=/repositories  
 
 # Aliases

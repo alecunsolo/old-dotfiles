@@ -74,7 +74,8 @@ plugins=(
     git-flow
     golang
     systemd
-    archlinux
+    dnf
+    docker
     copydir
     copyfile
     kate
@@ -89,6 +90,8 @@ plugins=(
     zsh_reload
     themes
     homeshick
+    helm
+    kubectl
 )
 
 source $ZSH/oh-my-zsh.sh

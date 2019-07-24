@@ -92,6 +92,8 @@ plugins=(
     homeshick
     helm
     kubectl
+    ansible
+    vagrant
 )
 
 source $ZSH/oh-my-zsh.sh

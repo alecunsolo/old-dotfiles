@@ -47,13 +47,9 @@ if [[ -d $SBT_HOME ]]; then
 fi
 
 # GO
-if [[ -d /usr/local/go ]]; then
-    if [[ -d /repositories/go ]]; then
-        GOPATH=/repositories/go
-        export GOPATH
-    fi
-    path=(/usr/local/go/bin $GOPATH/bin $path)
-fi
+typeset -xg GOPATH=/repositories/go
+path+=(/usr/local/go/latest/bin)
+path+=($GOPATH/bin)
 
 # Kubernetes
 typeset -xTU KUBECONFIG kubeconfig

@@ -55,6 +55,10 @@ if [[ -d /usr/local/go ]]; then
     path=(/usr/local/go/bin $GOPATH/bin $path)
 fi
 
+# Kubernetes
+typeset -xTU KUBECONFIG kubeconfig
+kubeconfig=(~/.kube/*(.))
+
 #VS Code
 path=(~/opt/VSCode/latest/bin/ $path)
 repos=/repositories  

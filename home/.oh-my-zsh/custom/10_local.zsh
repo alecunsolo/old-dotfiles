@@ -55,6 +55,13 @@ path+=($GOPATH/bin)
 typeset -xTU KUBECONFIG kubeconfig
 kubeconfig=(~/.kube/*(.))
 
+# PIP
+path+=(/home/acunsolo/.local/bin)
+disk-uuid() {
+    [[ -z $1 ]] && echo "Must pass an argument" && return 1
+    echo $(sudo blkid $1 -sUUID -ovalue)
+}
+
 #VS Code
 path=(~/opt/VSCode/latest/bin/ $path)
 repos=/repositories  

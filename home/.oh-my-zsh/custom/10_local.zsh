@@ -17,6 +17,11 @@ _autoload_custom() {
     fi
 }
 
+disk-uuid() {
+    [[ -z $1 ]] && echo "Must pass an argument" && return 1
+    echo $(sudo blkid $1 -sUUID -ovalue)
+}
+
 _autoload_custom ~/.zsh-functions
 _autoload_custom ~/.zsh-local-functions
 

@@ -76,6 +76,7 @@ plugins=(
     systemd
     dnf
     docker
+    docker-compose
     copydir
     copyfile
     kate
@@ -94,6 +95,7 @@ plugins=(
     kubectl
     ansible
     vagrant
+    aws
 )
 
 source $ZSH/oh-my-zsh.sh

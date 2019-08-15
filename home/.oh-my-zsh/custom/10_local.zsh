@@ -58,7 +58,7 @@ path+=($GOPATH/bin)
 
 # Kubernetes
 typeset -xTU KUBECONFIG kubeconfig
-kubeconfig=(~/.kube/*(.))
+kubeconfig=(~/.kube/*(.N))
 
 # PIP
 path+=(/home/acunsolo/.local/bin)

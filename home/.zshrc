@@ -72,30 +72,14 @@ plugins=(
     history
     git
     git-flow
-    golang
     systemd
-    dnf
-    docker
-    docker-compose
-    copydir
-    copyfile
-    kate
     man
-    mvn
     sudo
     tmux
-    vscode
     rsync
-    scala
-    sbt
     zsh_reload
     themes
     homeshick
-    helm
-    kubectl
-    ansible
-    vagrant
-    aws
 )
 
 source $ZSH/oh-my-zsh.sh

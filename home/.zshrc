@@ -69,6 +69,7 @@ DEFAULT_USER="acunsolo"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    # Common
     history
     git
     git-flow
@@ -80,6 +81,25 @@ plugins=(
     zsh_reload
     themes
     homeshick
+    # Fedora
+    golang
+    dnf
+    docker
+    docker-compose
+    copydir
+    copyfile
+    kate
+    mvn
+    vscode
+    scala
+    sbt
+    helm
+    kubectl
+    ansible
+    vagrant
+    aws
+    # Raspberry
+    archlinux
 )
 
 source $ZSH/oh-my-zsh.sh

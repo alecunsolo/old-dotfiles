@@ -81,27 +81,13 @@ plugins=(
     zsh_reload
     themes
     homeshick
-    # Fedora
-    golang
-    dnf
-    docker
-    docker-compose
-    copydir
-    copyfile
-    kate
-    mvn
-    vscode
-    scala
-    sbt
-    helm
-    kubectl
-    ansible
-    vagrant
-    aws
-    # Raspberry
-    archlinux
 )
 
+if [[ -d ~/.zshrc.d ]]; then
+    for i in ~/.zshrc.d/*.conf(^/DN:i); do
+        source $i
+    done
+fi
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,23 +95,40 @@ export EDITOR=vim
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+## Memory overview
+memusage() {
+    ps aux | awk '{if (NR > 1) print $5;
+                   if (NR > 2) print "+"}
+                   END { print "p" }' | dc
+}
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+_autoload_custom() {
+    if [[ -d $1 ]]; then
+        local -a f
+        # ^/ Not directories
+        # N -> Set NULL_GLOB
+        # D -> Set DOT_GLOB
+        # :A -> realpath (follow symlinks)
+        f=( $1/*(^/ND:A) )
+        [[ $#f -ne 0 ]] && autoload -Uz $f
+    fi
+}
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+_autoload_custom ~/.zsh-functions
+_autoload_custom ~/.zsh-local-functions
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+setopt rmstarwait
+setopt autonamedirs
+setopt noclobber
+setopt appendcreate
+
+alias grep='grep --color=auto'
+alias cp='cp -i --reflink=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias sysdreload='systemctl --user daemon-reload'
+alias find='noglob find'
+alias sudo='sudo '
+alias vzsh="vim ~/.zshrc"
+ 

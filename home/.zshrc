@@ -73,7 +73,6 @@ plugins=(
     history
     git
     git-flow
-    gitignore
     systemd
     man
     sudo

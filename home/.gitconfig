@@ -13,5 +13,6 @@
     email = alessandro.cunsolo@gmail.com
 [include]
     path = ~/.gitconfig.local
-[includeIf "gitdir:/repositories/sky/"]
+[includeIf "gitdir:/repositories/code/sky/"]
       path = .gitconfig.d/gitconfig.sky
+      

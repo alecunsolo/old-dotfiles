@@ -41,10 +41,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
 " Installed with pacman
 " Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 call plug#end()
+
+" vimgutter relies on this value to refresh signs
+set updatetime=100
 
 " Ctrl-n toggle NerdTree
 map <C-n> :NERDTreeToggle<CR>

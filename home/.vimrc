@@ -38,10 +38,10 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
 " Installed with pacman
 " Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'

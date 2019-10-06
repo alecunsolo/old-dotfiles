@@ -79,3 +79,7 @@ let g:airline_powerline_fonts = 1
 command! Reload execute "source ~/.vimrc"
 command! Filename execute ":echo expand('%:p')"
 command! Config execute ":e $MYVIMRC"
+
+" Abbreviations
+iabbr _AC Alessandro Cunsolo
+iabbr __AC alessandro.cunsolo@gmail.com

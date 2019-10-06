@@ -71,5 +71,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Show powerline fonts
 let g:airline_powerline_fonts = 1
 
-" Reload
+" Useful custom commands
 command! Reload execute "source ~/.vimrc"
+command! Filename execute ":echo expand('%:p')"
+command! Config execute ":e $MYVIMRC"
